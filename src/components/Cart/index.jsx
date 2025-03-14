@@ -6,7 +6,7 @@ import {
 
 function Cart() {
     return (
-        <StyledCart>
+        <StyledCart data-testid='shopping-cart'>
             <h3>Cart</h3>
             <StyledSeparator></StyledSeparator>
             <StyledEmptyMessage>Your cart is empty.</StyledEmptyMessage>

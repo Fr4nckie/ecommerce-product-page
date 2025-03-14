@@ -6,7 +6,9 @@ import path from 'path'
 export default defineConfig({
     plugins: [react(), svgr()],
     test: {
-        environment: 'jsdom'
+        environment: 'jsdom',
+        globals: true,
+        setupFiles: './test/setup.js'
     },
     resolve: {
         alias: {

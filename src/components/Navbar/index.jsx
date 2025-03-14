@@ -21,16 +21,22 @@ function Navbar() {
         <StyledNavbar>
             <StyledMenu>
                 {isMenuOpen ? (
-                    <button onClick={() => setIsMenuOpen(false)}>
+                    <button
+                        onClick={() => setIsMenuOpen(false)}
+                        aria-label="close-menu"
+                    >
                         <CloseMenu />
                     </button>
                 ) : (
-                    <button onClick={() => setIsMenuOpen(true)}>
+                    <button
+                        onClick={() => setIsMenuOpen(true)}
+                        aria-label="menu"
+                    >
                         <MenuBurger />
                     </button>
                 )}
             </StyledMenu>
-            <StyledNavbarBrand>
+            <StyledNavbarBrand aria-label="logo">
                 <Logo />
             </StyledNavbarBrand>
             <StyledNavbarNav $isMenuOpen={isMenuOpen}>
@@ -51,10 +57,13 @@ function Navbar() {
                 </li>
             </StyledNavbarNav>
             <StyledNavbarActions>
-                <button onClick={() => setIsCartOpen(!isCartOpen)}>
+                <button
+                    onClick={() => setIsCartOpen(!isCartOpen)}
+                    aria-label="cart-icon"
+                >
                     <CartIcon className="cart-icon" />
                 </button>
-                <button>
+                <button aria-label="profile">
                     <img src={avatar} alt="profile pic" />
                 </button>
             </StyledNavbarActions>
