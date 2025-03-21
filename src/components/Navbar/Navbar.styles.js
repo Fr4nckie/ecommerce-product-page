@@ -7,7 +7,12 @@ export const StyledNavbar = styled.nav`
     height: 80px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid ${colors.dark_grayish_blue};
+    padding: 0 5%;
+    background-color: ${colors.white};
+
+    @media screen and (min-width: 1024px) {
+        border-bottom: 1px solid ${colors.dark_grayish_blue};
+    }
 `
 
 export const StyledNavbarBrand = styled.div`
@@ -54,7 +59,7 @@ export const StyledNavbarNav = styled.ul`
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 0;
+        z-index: 120;
         flex-direction: column;
         align-items: start;
         gap: 32px;
@@ -91,7 +96,7 @@ export const StyledNavbarNav = styled.ul`
 export const StyledMenu = styled.div`
     display: none;
     position: relative;
-    z-index: 120;
+    z-index: 130;
     margin-top: 8px;
     margin-right: 16px;
 
@@ -108,6 +113,26 @@ export const StyledNavbarActions = styled.div`
 
     button {
         cursor: pointer;
+    }
+
+    button:first-child {
+        position: relative;
+
+        div {
+            position: absolute;
+            top: -50%;
+            right: -40%;
+            width: 22px;
+            height: 22px;
+            background-color: ${colors.orange};
+            color: ${colors.white};
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 22px;
+            font-size: 12px;
+            font-weight: 700;
+        }
     }
 
     button:last-child img {

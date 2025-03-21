@@ -12,10 +12,12 @@ import {
 } from './Navbar.styles.js'
 import Cart from '../Cart/index.jsx'
 import { useState } from 'react'
+import { useCart } from '@/hooks/useCart.jsx'
 
 function Navbar() {
     const [isCartOpen, setIsCartOpen] = useState(false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const { quantity, product } = useCart()
 
     return (
         <StyledNavbar>
@@ -62,6 +64,7 @@ function Navbar() {
                     aria-label="cart-icon"
                 >
                     <CartIcon className="cart-icon" />
+                    {product && <div>{quantity}</div>}
                 </button>
                 <button aria-label="profile">
                     <img src={avatar} alt="profile pic" />
