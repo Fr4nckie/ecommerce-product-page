@@ -20,4 +20,9 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     color: ${colors.dark_grayish_blue};
    }
+
+   button {
+      cursor: pointer;
+      font-family: "Rubik", sans-serif;
+   }
 `
