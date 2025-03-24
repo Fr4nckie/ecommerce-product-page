@@ -1,5 +1,6 @@
 import { useCart } from '@/hooks/useCart.jsx'
 import Delete from '@/assets/images/icon-delete.svg?react'
+import productThumb from '@/assets/images/image-product-1-thumbnail.jpg'
 import {
     StyledCartItem,
     StyledCartItemPrice,
@@ -15,7 +16,7 @@ function CartItem() {
     return (
         <StyledCartItem>
             <StyledDetailItem>
-                <img src={product.image} alt="product thumb" />
+                <img src={productThumb} alt="product thumb" />
                 <div>
                     <h1>{product.name}</h1>
                     <StyledCartItemPrice>

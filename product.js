@@ -1,6 +1,5 @@
 export const product = {
     id: 0,
-    image: '/src/assets/images/image-product-1-thumbnail.jpg',
     company: 'sneaker company',
     name: 'fall limited edition sneakers',
     description:
