@@ -138,8 +138,8 @@ export const StyledNavbarActions = styled.div`
     }
 
     button:last-child {
-        width: clamp(24px, 10%, 48px);
-        height: clamp(24px, 10%, 48px);
+        width: clamp(28px, 4vw, 48px);
+        height: clamp(28px, 4vw, 48px);
 
         img {
             width: 100%;
