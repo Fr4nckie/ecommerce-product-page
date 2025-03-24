@@ -21,25 +21,27 @@ function Navbar() {
 
     return (
         <StyledNavbar>
-            <StyledMenu>
-                {isMenuOpen ? (
-                    <button
-                        onClick={() => setIsMenuOpen(false)}
-                        aria-label="close-menu"
-                    >
-                        <CloseMenu />
-                    </button>
-                ) : (
-                    <button
-                        onClick={() => setIsMenuOpen(true)}
-                        aria-label="menu"
-                    >
-                        <MenuBurger />
-                    </button>
-                )}
-            </StyledMenu>
             <StyledNavbarBrand aria-label="logo">
-                <Logo />
+                <StyledMenu>
+                    {isMenuOpen ? (
+                        <button
+                            onClick={() => setIsMenuOpen(false)}
+                            aria-label="close-menu"
+                        >
+                            <CloseMenu />
+                        </button>
+                    ) : (
+                        <button
+                            onClick={() => setIsMenuOpen(true)}
+                            aria-label="menu"
+                        >
+                            <MenuBurger />
+                        </button>
+                    )}
+                </StyledMenu>
+                <button>
+                    <Logo />
+                </button>
             </StyledNavbarBrand>
             <StyledNavbarNav $isMenuOpen={isMenuOpen}>
                 <li>

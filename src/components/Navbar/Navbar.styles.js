@@ -7,6 +7,7 @@ export const StyledNavbar = styled.nav`
     height: 80px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 5%;
     background-color: ${colors.white};
 
@@ -16,7 +17,8 @@ export const StyledNavbar = styled.nav`
 `
 
 export const StyledNavbarBrand = styled.div`
-    margin-right: 32px;
+    display: flex;
+    align-items: center;
 `
 
 export const StyledNavbarNav = styled.ul`
@@ -97,7 +99,7 @@ export const StyledMenu = styled.div`
     display: none;
     position: relative;
     z-index: 130;
-    margin-top: 8px;
+    margin-top: 11px;
     margin-right: 16px;
 
     @media screen and (max-width: 768px) {
@@ -108,8 +110,8 @@ export const StyledMenu = styled.div`
 export const StyledNavbarActions = styled.div`
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 24px;
-    margin-left: auto;
 
     button {
         cursor: pointer;
@@ -135,9 +137,15 @@ export const StyledNavbarActions = styled.div`
         }
     }
 
-    button:last-child img {
-        width: 50px;
-        height: 50px;
+    button:last-child {
+        width: clamp(24px, 10%, 48px);
+        height: clamp(24px, 10%, 48px);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         &:hover {
             border: 2px solid ${colors.orange};
