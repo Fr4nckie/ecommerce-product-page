@@ -8,7 +8,7 @@ Project based on the Frontend Mentor challenge
 
 ## Demo
 
-// Link...
+https://ecommerce-product-page-eta-six.vercel.app/
 
 
 ## Tech Stack
