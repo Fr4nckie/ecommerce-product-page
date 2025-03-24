@@ -1,8 +1,36 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# E-commerce product page
 
-Currently, two official plugins are available:
+Project based on the Frontend Mentor challenge
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+
+## Demo
+
+// Link...
+
+
+## Tech Stack
+- React.js + Vite
+- Styled Components
+## Features
+
+- Responsive interface (desktop & mobile)
+- Lightbox to display product images
+- Add and remove items from the cart
+- Image navigation with thumbnails
+
+
+## Contributing
+Contributions are welcome! Fork the repo, create a branch, and submit a PR.
+
+
+## License
+
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
+
+
+## Acknowledgements
+
+Inspired by [Frontend Mentor](https://www.frontendmentor.io/)
