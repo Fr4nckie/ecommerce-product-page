@@ -5,6 +5,7 @@ export const StyledNavbar = styled.nav`
     position: relative;
     width: 100%;
     height: 80px;
+    min-height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,12 +14,17 @@ export const StyledNavbar = styled.nav`
 
     @media screen and (min-width: 1024px) {
         border-bottom: 1px solid ${colors.dark_grayish_blue};
+        justify-content: flex-start;
     }
 `
 
 export const StyledNavbarBrand = styled.div`
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 32px;
+    }
 `
 
 export const StyledNavbarNav = styled.ul`
@@ -112,6 +118,7 @@ export const StyledNavbarActions = styled.div`
     align-items: center;
     justify-content: flex-end;
     gap: 24px;
+    margin-left: auto;
 
     button {
         cursor: pointer;
