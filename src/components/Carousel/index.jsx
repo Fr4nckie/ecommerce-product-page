@@ -27,17 +27,20 @@ function Carousel({ onclick }) {
     const thumbnails = [thumbnail1, thumbnail2, thumbnail3, thumbnail4]
 
     return (
-        <StyledCarousel>
+        <StyledCarousel data-testid="carousel">
             <StyledSwiper
                 spaceBetween={10}
                 navigation={true}
                 thumbs={{ swiper: thumbsSwiper }}
                 modules={[FreeMode, Navigation, Thumbs]}
                 className="mySwiper2"
-                onClick={onclick}
             >
                 {images.map((src, index) => (
-                    <SwiperSlide key={index}>
+                    <SwiperSlide
+                        key={index}
+                        onClick={onclick}
+                        data-testid="slide"
+                    >
                         <img src={src} alt={`product-image-${index + 1}`} />
                     </SwiperSlide>
                 ))}

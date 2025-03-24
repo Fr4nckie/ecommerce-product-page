@@ -5,8 +5,8 @@ import { StyledProductModal } from './Product.styles.js'
 
 function ProductModal({ onclick }) {
     return createPortal(
-        <StyledProductModal>
-            <button onClick={onclick}>
+        <StyledProductModal data-testid="product-modal">
+            <button onClick={onclick} aria-label='close-modal'>
                 <Close />
             </button>
             <Carousel />
