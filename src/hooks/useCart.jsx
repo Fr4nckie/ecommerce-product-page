@@ -16,9 +16,16 @@ export const CartContextProvider = ({ children }) => {
     const [product, setProduct] = useState(null)
     const [quantity, setQuantity] = useState(1)
 
-    const addProduct = useCallback((newProduct) => {
-        setProduct(newProduct)
-    }, [])
+    const addProduct = useCallback(
+        (newProduct) => {
+            if (product) {
+                return setQuantity(quantity + 1)
+            } else {
+                return setProduct(newProduct)
+            }
+        },
+        [product, quantity]
+    )
 
     const removeProduct = useCallback(() => {
         setProduct(null)
